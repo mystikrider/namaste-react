@@ -1,10 +1,9 @@
-## git
-
-git init
-git branch -M main
-git add .
-git commit -m "message"
-git remote add origin https://github.com/mystikrider/namaste-react.git
+## Git
+    git init
+    git branch -M main
+    git add .
+    git commit -m "message"
+    git remote add origin https://github.com/mystikrider/namaste-react.git
 
 ## TODO # setup github ssh in local system
 
@@ -55,3 +54,19 @@ git remote add origin https://github.com/mystikrider/namaste-react.git
         query composition for country based brw sprt
     ]
 ## This is enough for the setup, same as we do with create-react-app
+
+## package json
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+
+    JSX is not HTML inside JS anad jsx is a different syntax by itself
+    its an HTML like syntax, it looks like xml, even more close to xml
+    babel js transpile/compile jsx to react code so that browser can understand
+    babes does transpiles convert new js code to the way oldr browser understands
+
+## prettier code formatter, bracket pair colorizer, eslint -msoft, better comments
+
+## Class comps & Func Comps
+    this is diff in func and arrow comp
+
+## (XSS) attacks or Cross site scripting - JSX sanitize data inside {} to prevetn attack from malicious apis/data/scripts
