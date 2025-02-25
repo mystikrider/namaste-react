@@ -64,9 +64,27 @@
     babel js transpile/compile jsx to react code so that browser can understand
     babes does transpiles convert new js code to the way oldr browser understands
 
-## prettier code formatter, bracket pair colorizer, eslint -msoft, better comments
+## prettier code formatter, bracket pair colorizer, eslint -msoft, better comments, json viewer
 
 ## Class comps & Func Comps
     this is diff in func and arrow comp
 
 ## (XSS) attacks or Cross site scripting - JSX sanitize data inside {} to prevetn attack from malicious apis/data/scripts
+
+## Keep the code modular, follow DRY priciple
+
+## Props - pass dynamic data to comps
+    props to comp = args to functions = is an object
+    const { var1, var2} = props - destructrung
+
+## Config Driven UI in swiggy API - System Design Interview - latest practice
+    - controlling/displaying ui based on data/config/ - eg: diff offer carousel for diff cities
+    ui layer/data layer
+
+## array.join(", ") = for comma separetd
+    big sites do keep images in CDN
+    data?.var - optional chaining
+    map filer and reduce is importan
+    list items shud be uniquely represented using key
+    Performance hit - react has to render all the cards if list items are not uniquley identified with keys, infinite scroll, lots of list items impact very high
+    never use index as key recommended by react
