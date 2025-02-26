@@ -1,21 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-/**
- * Header
- *  - logo
- *  - nav items
- * Body
- *  - Serach bar
- *  - Restaurant Container
- *      - Restaurant cards
- * Footer
- *  - Copyriht
- *  - contact links
- * 
- */
-
-const restaurantList = [
+export const restaurantList = [
     {
       "info": {
         "id": "693337",
@@ -1854,62 +1837,3 @@ const restaurantList = [
       }
     }
   ]
-
-const Header = () => {
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <img className="logo" src="https://static.vecteezy.com/system/resources/previews/011/468/885/non_2x/food-logo-spoon-fork-icon-illustration-symbol-for-fast-delivery-app-restaurant-template-free-vector.jpg" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-const RestaurantCard = (props) => {
-    const { restaurantData } = props;
-    const {name, cuisines, costForTwo, avgRating} = restaurantData?.info;
-    return (
-        <div className="restaurant-card">
-                    <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2024/10/4/ec4fff64-26d9-47e7-91c9-7aeb371be4a3_20241004T130026845.jpg" />
-                    <h4>{name}</h4>
-                    <h4>{cuisines.join(", ")}</h4>
-                    <h4>{costForTwo}</h4>
-                    <h5>{avgRating} stars</h5>
-                </div>
-    )
-}
-
-const Body = () => {
-    return (
-        <div className="body">
-            <div className="search">
-                Search
-            </div>
-            <div className="restaurant-container">
-                {restaurantList.map((restaurant) => <RestaurantCard key={restaurant?.info?.id} restaurantData={restaurant} />)}
-            </div>
-        </div>
-    )
-}
-
-const AppLayout = () => {
-    return (
-        <div className="app">
-            <Header />
-            <Body />
-        </div>
-    )
-}
-
-//render to DOM
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);

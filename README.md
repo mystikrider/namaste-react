@@ -88,3 +88,24 @@
     list items shud be uniquely represented using key
     Performance hit - react has to render all the cards if list items are not uniquley identified with keys, infinite scroll, lots of list items impact very high
     never use index as key recommended by react
+
+## Why react
+    superfast, optimized apps
+
+## React Hooks
+    utils/constants.js for mockdata/common files
+    named imoort/export
+    comp file shud not exceed more than 100 lines - Performance
+    Ract can do fater dom manipulation
+
+## useState() - super powerful react variable
+    hook is ust a normal js utility func
+    wenever a state var changes react re render the comp
+    react keeps the ui layer in sync wiyh data layer
+    reqct is super quick in dom maniplation
+
+## react fibre architecture, diff algorithm, reconsciliation, virtual dom
+    react fibre or reconciliation algo
+    git diff
+    virtual dom is onject reprresentatio of actual dom that is div tags, html nodes
+    this is react is Best at, why react is fast becasue it has viryual dom, effiencen dom manipulaion
