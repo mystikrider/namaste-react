@@ -99,6 +99,10 @@
     Ract can do fater dom manipulation
 
 ## useState() - super powerful react variable
+
+    const [list, setList] = useState([]);
+    when a settr fun changes a state var in nw render its whole new const var
+
     hook is ust a normal js utility func
     wenever a state var changes react re render the comp
     react keeps the ui layer in sync wiyh data layer
@@ -109,3 +113,46 @@
     git diff
     virtual dom is onject reprresentatio of actual dom that is div tags, html nodes
     this is react is Best at, why react is fast becasue it has viryual dom, effiencen dom manipulaion
+
+## Monolith vs Microservices Architec
+    Monolith
+        all in one place, repo - api, db, ui, authentication, sms services etc.
+        all wrkng on same repo
+        even 4 a small change full build is needed
+    Microservic
+
+        sepatation of concern 
+        every sefcie theri own deploument cycle
+        decision - wht use case ? which land suitable, what techsatk
+        diff ports will runig for diff services
+        all pirts can be mappedd to domian name finaly
+        :1234 - ui running on diff ports
+        :234 - api
+        / - ui
+        /api - api
+
+## Render UI - better Ui
+    page laods > render ui > api > render ui again
+
+## useEffect()
+
+    useEffect(() => {
+        console.log("useEffect called")
+    }, [])
+
+    will be called after comp is rendered
+
+## Api call
+    cors policy - not allowing swiggy api calling dfrom locakhost
+    to bypass use, allow cors chrome extension - important
+
+## Shimmer ui or loader - better ui experice user can antcipate, 
+    as api loads data show fake cards/skeleton resembling UI
+    dummy page
+    conditional rendering
+
+## Javascript
+    .toLowerCase
+    .includes()
+    Array.join(", ")
+ 
