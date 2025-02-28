@@ -91,12 +91,12 @@
 
 ## Why react
     superfast, optimized apps
-
-## React Hooks
     utils/constants.js for mockdata/common files
     named imoort/export
     comp file shud not exceed more than 100 lines - Performance
     Ract can do fater dom manipulation
+
+## React Hooks
 
 ## useState() - super powerful react variable
 
@@ -119,8 +119,8 @@
         all in one place, repo - api, db, ui, authentication, sms services etc.
         all wrkng on same repo
         even 4 a small change full build is needed
-    Microservic
 
+    Microservic
         sepatation of concern 
         every sefcie theri own deploument cycle
         decision - wht use case ? which land suitable, what techsatk
@@ -141,10 +141,17 @@
     }, [])
 
     will be called after comp is rendered
+    if No dependency array - useEff will be called on every comp render
+    if theres emoty depenedy aarry - will be called only once 
+    if depend array have any value/vars = will be called wheenever that value/vars changes
 
 ## Api call
     cors policy - not allowing swiggy api calling dfrom locakhost
     to bypass use, allow cors chrome extension - important
+    get rid of cors plugin
+        to bypass cors error
+            corsproxy.io
+
 
 ## Shimmer ui or loader - better ui experice user can antcipate, 
     as api loads data show fake cards/skeleton resembling UI
@@ -155,4 +162,56 @@
     .toLowerCase
     .includes()
     Array.join(", ")
- 
+    fetch post call - important
+    || operatior
+
+## Pending Task
+    as user scroll update restaurant list using fetch post
+
+## Routing/child routes/link instead of a tag, error handling
+    React are signle page app - SPA only 1 page , going to route meabs rendrign a comp only not reloading
+    react-router-dom
+    npm i react-router-dom
+    
+    import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
+
+    const appRouter = createBrowserRouter([
+        {
+            path: "/",
+            element: <AppLayout/>,
+            children: [
+                {
+                    path: "/about",
+                    element: <About/>
+                }
+            ]
+            errorElement: <ErrorPage/>
+        },
+        {
+            path: "/about",
+            element: <About/>
+        }
+    ])
+
+    root.render(<RouterProvider router={appRouter}>)
+
+    const err = useRouteError() to get more info on errors
+
+## Routing 
+
+    Server side - network call will be made and page will served to the ui, orfetches the page
+    
+    Client side - single page with diff comps, on click comps will be loaded i nthe ui
+
+## Dynamic Routing
+    /restaurants/:resId
+    graphql makes api handling easym helps u with overfetching
+    load only wanted data - graphql
+
+## Pending
+    toggle veg/nonveg
+    show all item cards in restarant page not just recomnd
+
+## const {resId} = useParams()
+    to get params like ids from the url eg: /restaurant/:resId
+    restaurnt/params or restaraunt/1234
