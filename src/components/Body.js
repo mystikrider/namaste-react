@@ -33,21 +33,22 @@ const Body = () => {
 
     return listRestaurant.length === 0 ? <Shimmer /> : (
         <div className="body">
+            <div className="flex justify-between p-5">
             <div className="search-box">
-                <input className="search-inp" type="text" onChange={(e) => setSearchText(e.target.value)} value={searchText} />
-                <button onClick={() => {
+                <input className="border border-gray-400 p-2 rounded-sm mr-3" type="text" onChange={(e) => setSearchText(e.target.value)} value={searchText} />
+                <button className="bg-blue-500 text-white p-2 rounded-sm" onClick={() => {
                     const filteredRestaurant = listRestaurant.filter((restaurant) => restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase()))
                     setFilteredRestaurant(filteredRestaurant)
                 }}>Search</button>
             </div>
-            <div className="filter-toprated">
-                <button onClick={() => {
-                    const topRatedRestaurant = listRestaurant.filter((restaurant) => restaurant?.info?.avgRating > 4.2);
-                    console.log(topRatedRestaurant)
-                    setListRestaurant(topRatedRestaurant);
-                }}>Top Rated Restaurants</button>
+                <button className="bg-blue-500 text-white p-2 rounded-sm" onClick={() => {
+                        const topRatedRestaurant = listRestaurant.filter((restaurant) => restaurant?.info?.avgRating > 4.2);
+                        console.log(topRatedRestaurant)
+                        setListRestaurant(topRatedRestaurant);
+                    }}>Top Rated Restaurants</button>
             </div>
-            <div className="restaurant-container">
+            
+            <div className="flex flex-wrap">
                 {filteredRestaurant.map((restaurant) => <Link to={"/restaurants/"+restaurant?.info?.id} key={restaurant?.info?.id}><RestaurantCard restaurantData={restaurant} /></Link>)}
             </div>
         </div>

@@ -64,7 +64,7 @@
     babel js transpile/compile jsx to react code so that browser can understand
     babes does transpiles convert new js code to the way oldr browser understands
 
-## prettier code formatter, bracket pair colorizer, eslint -msoft, better comments, json viewer
+## tools prettier code formatter, bracket pair colorizer, eslint -msoft, better comments, json viewer, tailwind css intelisense
 
 ## Class comps & Func Comps
     this is diff in func and arrow comp
@@ -252,3 +252,22 @@
     if u want to scale ur big apps 
     feature specific chunks or bundles
     logicallu breaking app onti smaler bndles
+
+    import { lazy, Suspense }
+    const About = lazy(() => import("./comp/About))
+    element: <Suspense fallback={<h1>fallback comp or loading text</h1>}><About /></Suspense>
+
+## CSS/SASS/SCSS - not a recommended way now
+    https://styled-components.com/
+    materia ui - u will get pre build css comps
+    bootsrap
+    chakra ui
+    ant design
+
+    TAILWIND css
+        style comps without leavin html
+        some initail learnin curve only
+        Tailwind ui - but its paid some are free
+        ships only used styles
+        Theme dark mode/ is common for apps, so its easy with tailwinf
+        
