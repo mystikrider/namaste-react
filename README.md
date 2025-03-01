@@ -145,6 +145,21 @@
     if theres emoty depenedy aarry - will be called only once 
     if depend array have any value/vars = will be called wheenever that value/vars changes
 
+    useEffect(() => {
+
+        "useEffect will be rendered after comp render for once and then clean up func after comp unmounts"
+
+        const timer = setInterval(() => {
+            "timer"
+        }, 1000);
+
+        return () => {
+            clearInterval(timer)
+            }
+
+    }, [])
+    
+
 ## Api call
     cors policy - not allowing swiggy api calling dfrom locakhost
     to bypass use, allow cors chrome extension - important
@@ -215,3 +230,25 @@
 ## const {resId} = useParams()
     to get params like ids from the url eg: /restaurant/:resId
     restaurnt/params or restaraunt/1234
+    
+
+## Perfomance
+    Single Responsibility Principle
+        breaking down code into multiple components based on purpose
+        break down code into modular fashion
+        code becomes more testable, maintainable
+        catching bugs very easily
+        reusable. maintainable testable
+        setup linters like eslint,
+
+## Custom hooks
+    utilitiy funcs to abstract certain logic to make it resuable
+    Learn local storage/session storage
+    internet on/off
+
+## Optimize/ Performance
+    chunking or lazy loadung, code splitting, dynamic bundling
+    small bundles of components instead of 1 large signle bndle file
+    if u want to scale ur big apps 
+    feature specific chunks or bundles
+    logicallu breaking app onti smaler bndles
