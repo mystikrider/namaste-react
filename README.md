@@ -64,7 +64,7 @@
     babel js transpile/compile jsx to react code so that browser can understand
     babes does transpiles convert new js code to the way oldr browser understands
 
-## tools prettier code formatter, bracket pair colorizer, eslint -msoft, better comments, json viewer, tailwind css intelisense
+## tools prettier code formatter, bracket pair colorizer, eslint -msoft, better comments, json viewer, tailwind css intelisense, react dev tools chrome
 
 ## Class comps & Func Comps
     this is diff in func and arrow comp
@@ -179,6 +179,7 @@
     Array.join(", ")
     fetch post call - important
     || operatior
+    .card?.info?.["@type"]
 
 ## Pending Task
     as user scroll update restaurant list using fetch post
@@ -270,4 +271,44 @@
         Tailwind ui - but its paid some are free
         ships only used styles
         Theme dark mode/ is common for apps, so its easy with tailwinf
-        
+
+## HOC
+    func takes a comp and returns another comp
+    takes an  input and tweaks and return back, modify and retunr
+    promoted restaurant
+    take a comp, add some changes on top of it return a new one
+    hoc are pure funcs - which are not modified but add some changes on top of it
+
+## controlled/uncontrolled comps & lifting the state up
+    componets and profiler in react dev tools
+    profiler helps to understand the time it took to load comp
+    when a comp has its own state it controled by itself, so its uncontroled
+    whwere wehn a comp state is controlle by its parent itas controlled omp
+
+    lifting the state up
+        <Rest showItems={index === showIndex} setShowIndex = {() => setShowIndex(prev => prev === index ? null : index)} />
+
+## Props Drilling - nested comp states
+    react has one way data flow, from parent to child
+
+## Context API
+    keep data in a central store
+    in class based comp dont have hooks
+    const UserContext = createContext({
+        loggedInUser: "User name"
+    })
+    const { loggedInUser } = useContext(UserContext)
+
+    if itsa class comp
+        <UserContext.Consumer>
+            {( {loggedInUser} ) => {
+                <h1>{loggedInUser}</h1>
+            }}
+        </UserContext.Consumer>
+
+    and its a performant approach
+    state management libs like redux is noy needed for small mid size apps
+    redux is smt which come outisde of the box not nativeto react
+    redux gives thunks and middlewares
+
+## Pending - Authentication
