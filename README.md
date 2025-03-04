@@ -180,6 +180,7 @@
     fetch post call - important
     || operatior
     .card?.info?.["@type"]
+    const newState = [...state] // make a copy
 
 ## Pending Task
     as user scroll update restaurant list using fetch post
@@ -312,3 +313,28 @@
     redux gives thunks and middlewares
 
 ## Pending - Authentication
+
+## Reducx
+    npm i @reduxjs/toolkit
+    npm i react-redux
+
+    redux and react are two diff libs
+    why redux - easu to debug, big apps, data, scalabililty
+    redux tkit and react-reduz are the 2 libs wwe need
+
+    Redux store is a central palce where we can have all our data
+    its like a big object
+    stores data as logically separated data slices
+
+    Button click => dispatch an acton => a reducer fn is called => which will modify state in data slice => comp uses selectore to 
+    subscribe to the slcie and get the updated state value
+
+    Redux workflow > Buttton Clicked > dispatch an action > calls reducer function > modify slice data > comp will be subscribed to slice via useSelector hook thus state will be updated,
+
+    () => handleCart(item) - call back
+    handleCart(item) - calling right away
+
+    performance - if u are not subscribing to the exact portion of the store it will cause perf isues impro
+    react dev tols effiecent usage
+
+    for async ops earlier there was thunk and middlewear now its RTK Query

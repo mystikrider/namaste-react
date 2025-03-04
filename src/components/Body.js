@@ -48,7 +48,7 @@ const Body = () => {
                 }}>Search</button>
             </div>
             <div>
-                Change User Name: <input className="border" type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
+                Change User Name: <input className="border border-gray-400 p-2 rounded-sm mr-3" type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
                 <button className="bg-blue-500 text-white p-2 rounded-sm" onClick={() => {
                         const topRatedRestaurant = listRestaurant.filter((restaurant) => restaurant?.info?.avgRating > 4.2);
                         console.log(topRatedRestaurant)
