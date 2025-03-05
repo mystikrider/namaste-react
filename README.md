@@ -338,3 +338,25 @@
     react dev tols effiecent usage
 
     for async ops earlier there was thunk and middlewear now its RTK Query
+
+## RTK Query - data fetching funcinality
+    data fechn and caching
+
+    Advantages
+        bettr to switch to rtk qry rather than manually handling api reqs with fetch or axios
+
+        No need for useEffect or useState to fetch data
+        Automatic caching, no extra API calls
+        Auto refetching if data changes
+        Cleaner and more optimized code
+
+        For any medium to large-scale app, RTK Query is the better choice because it handles caching, refetching, and state management automatically, making your code cleaner and more efficient.
+
+        Comparison: Fetch API vs. RTK Query
+        Feature	Fetch API (Manual)	RTK Query (Automatic)
+        Caching	❌ No caching, needs local state	✅ Stores and reuses API responses
+        Automatic Refetching	❌ Must manually refetch	✅ Auto refetches when needed
+        Optimized API Calls	❌ Always makes a new request	✅ Avoids unnecessary requests
+        State Management	❌ Need useState and useEffect	✅ Automatically managed
+
+## Formik for form data mngmnt

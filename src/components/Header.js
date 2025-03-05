@@ -10,7 +10,7 @@ const Header = () => {
     const onlineStatus = useOnlineStatus();
     const {loggedInUser} = useContext(UserContext);
     const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems)
+    
 
     return (
         <div className="header flex justify-between items-center sm:bg-green-100 md:bg-amber-100 lg:bg-pink-100 bg-blue-100 p-4 shadow-md">
@@ -21,8 +21,8 @@ const Header = () => {
                 <ul className="flex items-center">
                     <li className="mx-3">Online : {onlineStatus ? "✅" : "🔴"}</li>
                     <li className="mx-3"><Link to="/">Home</Link></li>
-                    <li className="mx-3"><Link to="/about">About</Link></li>
-                    <li className="mx-3"><Link to="/contact">Contact</Link></li>
+                    <li className="mx-3"><Link to="/about">About RTKQuery</Link></li>
+                    <li className="mx-3"><Link to="/contact">Contact RTKQuery</Link></li>
                     <li className="mx-3 font-bold"><Link to="/cart">Cart({cartItems.length})items</Link></li>
                     <li className="mx-3 font-bold">User: {loggedInUser}</li>
                     <li className="mx-3">

@@ -9,7 +9,9 @@ import UserContext from "../utils/UserContext";
 const Body = () => {
     const [listRestaurant, setListRestaurant] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+    
     const [searchText, setSearchText] = useState("");
+    
     const onlineStatus = useOnlineStatus();
     const {loggedInUser, setUserName} = useContext(UserContext);
 
@@ -24,6 +26,7 @@ const Body = () => {
     const fetchData = async () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=8.5542388&lng=76.884132&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const response = await data.json();
+
         // console.log(response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setListRestaurant(response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Update Rest List
         setFilteredRestaurant(response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Update Filtered Rest List
